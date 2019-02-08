@@ -1,11 +1,23 @@
-var secretWord = "backscratcher";
-console.log("Secret Word: ", secretWord);
+function hangmanGameStart() {
+  
+  
+}
 
-function registerKeyPress() {
+function checkLetter() {
+  var secretWord = "backscratcher";
+  var remainingGuesses = 20;
   var keyPressed = event.key;
-  console.log("key pressed", keyPressed)
   var incl = secretWord.includes(keyPressed);
-  console.log("incl", incl);
+  var guesses = document.getElementById("guessCount");
+  
+  if (incl == true) {
+    console.log("it's in there");
+  } 
+  if (incl == false) {
+    console.log("nope");
+  }
+  console.log(remainingGuesses)
+  guesses.innerText = remainingGuesses;
 }
 
 
@@ -17,11 +29,4 @@ function registerKeyPress() {
 
 
 
-
-
-
-
-// determine the secret word, display as "_"'s
-
-// change letter from "_" to the letter
 

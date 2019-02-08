@@ -1,0 +1,9 @@
+need to:
+- display secret word as "_"'
+
+problems:
+- guesses remaining does not display until keypress
+- guesses remaining does not decrease with "--"
+
+
+- functions within functions?
