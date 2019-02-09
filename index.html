@@ -3,22 +3,22 @@
     <title>Hangman Game by Curtis Humphrey</title>
 
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <!--<link rel="stylesheet" type="text/css" href="assets/css/reset.css">-->
 
     <script src="assets/javascript/game.js"></script>
 
   </head>
-  <body onload="hangmanGameStart();" onkeypress="checkLetter();">
+  <body onload="gameStart();" onkeypress="checkLetter();decreaseGuesses();">
     <h1>Hangman Game</h1>
     <div class="gameTextBox">  
       <div class="gameText">
         Press any key to start!
         <br>
-        Wins:
+        Wins: 
         <br>
         Current Word
         <br>
-        <!--game word goes here-->
+        <p id="secretWordLetters">
         <br>
         Remaining Guesses
         <br>
@@ -26,7 +26,7 @@
         <br>
         Already Guessed
         <br>
-        <!--letters guessed goes here-->
+        <p id="wrongLetters">
       </div>
     </div>
   </body>

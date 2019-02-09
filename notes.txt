@@ -1,5 +1,12 @@
+Github.io:
+https://1curtislee.github.io/Hangman-Game/ 
+
+
 need to:
 - display secret word as "_"'
+- only register letters as keys pressed once game starts
+
+-populate guessedArray[] with each letter key pressed
 
 problems:
 - guesses remaining does not display until keypress
