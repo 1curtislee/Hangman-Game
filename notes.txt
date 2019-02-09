@@ -7,3 +7,5 @@ problems:
 
 
 - functions within functions?
+
+- github pages does not read my css or js files
