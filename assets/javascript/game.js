@@ -4,7 +4,7 @@ function gameStart() {
 
 
 
-
+var secretWord = "backscratcher";
 var remainingGuesses = 20;
 
 function decreaseGuesses() {
@@ -12,12 +12,10 @@ function decreaseGuesses() {
 }
 
 function checkLetter() {
-  var secretWord = "backscratcher";
   var keyPressed = event.key;
   console.log(event.key);
   var incl = secretWord.includes(keyPressed);
-  var guesses = document.getElementById("guessCount");
-  var letters = document.getElementById("wrongLetters");
+  
   if (incl == true) {
     console.log("GOT ONE!");
   } 
@@ -26,9 +24,16 @@ function checkLetter() {
   }
   
   var guessedArray = [0, 1, 2, 3]
-  guessedArray[2] = event.key;
+  
+  
+  
+  
+  var guesses = document.getElementById("guessCount");
+  var letters = document.getElementById("wrongLetters");
+  
 
-    //Populating body:
+
+  //Populating body:
   secretWordLetters.innerText = "* * * * * * * * * * * * *"
   letters.innerText = guessedArray;
   guesses.innerText = remainingGuesses;
@@ -37,6 +42,9 @@ function checkLetter() {
     alert("GAME OVER");
   }
 }
+
+
+
 
 
 

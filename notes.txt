@@ -3,7 +3,7 @@ https://1curtislee.github.io/Hangman-Game/
 
 
 need to:
-- display secret word as "_"'
+- display secret word as "*", update as letters are guessed correctly
 - only register letters as keys pressed once game starts
 
 -populate guessedArray[] with each letter key pressed
