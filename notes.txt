@@ -3,16 +3,19 @@ https://1curtislee.github.io/Hangman-Game/
 
 
 need to:
-- display secret word as "*", update as letters are guessed correctly
+- populate "already guessed" with each letter key pressed 
+- user alert should pop up after "remaining guesses" reaches 0, or after word is fully guessed
+
 - only register letters as keys pressed once game starts
 
--populate guessedArray[] with each letter key pressed
+
+-update wins
+
 
 problems:
-- guesses remaining does not display until keypress
-- guesses remaining does not decrease with "--"
 
 
+
+questions:
 - functions within functions?
-
-- github pages does not read my css or js files
+- how to specify if a key does not match any strings in an array (game.js:79)

@@ -8,24 +8,33 @@
     <script src="assets/javascript/game.js"></script>
 
   </head>
-  <body onload="" onkeypress="checkLetter();decreaseGuesses();">
+  <body onload="gameStart();" onkeypress="registerKey();decreaseGuesses();">
     <h1>Hangman Game</h1>
     <div class="gameTextBox">  
       <div class="gameText">
-        Press any key to start!
+        press any key to start
         <br>
-        Wins: 
+        wins: 
         <br>
-        Current Word
-        <br>
-        <p id="secretWordLetters">
-        <br>
-        Remaining Guesses
-        <br>
+        current word
+        <div class=currentWord>
+          <span id="b">*</span>
+          <span id="a1">*</span>
+          <span id="c1">*</span>
+          <span id="k">*</span>
+          <span id="s">*</span>
+          <span id="c2">*</span>
+          <span id="r1">*</span>
+          <span id="a2">*</span>
+          <span id="t">*</span>
+          <span id="c3">*</span>
+          <span id="h">*</span>
+          <span id="e">*</span>
+          <span id="r2">*</span>
+        </div>
+        remaining guesses
         <p id="guessCount"></p>
-        <br>
-        Already Guessed
-        <br>
+        already guessed
         <p id="wrongLetters">
       </div>
     </div>
