@@ -17,9 +17,10 @@ function decreaseGuesses() {
   }
 }
 
+var lettersGuessed = [];
 function trackLetters() {
   var pressed = event.key;
-  var lettersGuessed = [''];
+
   console.log("letterTrack", pressed);
   
   lettersGuessed.push(pressed);

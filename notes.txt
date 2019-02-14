@@ -13,5 +13,6 @@ problems:
 
 
 questions:
-- functions within functions?
 - how to specify if a key does not match any strings in an array (game.js:79)
+
+Udemy
