@@ -4,11 +4,12 @@
 
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <!--<link rel="stylesheet" type="text/css" href="assets/css/reset.css">-->
-
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="assets/javascript/game.js"></script>
 
   </head>
-  <body onload="gameStart();" onkeypress="registerKey();decreaseGuesses();">
+  <body onload="gameStart();" onkeypress="registerKey();decreaseGuesses();trackLetters();">
     <h1>Hangman Game</h1>
     <div class="gameTextBox">  
       <div class="gameText">
@@ -35,7 +36,7 @@
         remaining guesses
         <p id="guessCount"></p>
         already guessed
-        <p id="wrongLetters">
+        <p id="lettersGuessedP">
       </div>
     </div>
   </body>

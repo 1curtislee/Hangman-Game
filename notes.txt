@@ -3,17 +3,13 @@ https://1curtislee.github.io/Hangman-Game/
 
 
 need to:
-- populate "already guessed" with each letter key pressed 
+- populate "already guessed" with each letter key pressed, 
 - user alert should pop up after "remaining guesses" reaches 0, or after word is fully guessed
-
 - only register letters as keys pressed once game starts
-
-
--update wins
+- update wins
 
 
 problems:
-
 
 
 questions:

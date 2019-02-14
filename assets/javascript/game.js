@@ -3,8 +3,6 @@ function gameStart() {
   guesses.innerText = remainingGuesses;
 }
 
-//var secretWord = "backscratcher";
-
 var remainingGuesses = 20;
 if (remainingGuesses == 0) {
   alert("GAME OVER");
@@ -19,10 +17,24 @@ function decreaseGuesses() {
   }
 }
 
+function trackLetters() {
+  var pressed = event.key;
+  var lettersGuessed = [''];
+  console.log("letterTrack", pressed);
+  
+  lettersGuessed.push(pressed);
+  console.log(lettersGuessed);
+  
+  document.getElementById("lettersGuessedP");
+  lettersGuessedP.innerText = lettersGuessed;
+  
+}
+
 var letters = ["b", "a", "c", "k", "s", "c", "r", "a", "t", "c", "h", "e", "r"]
 
 function registerKey() {
   console.log(event.key);
+  
   if (event.key == letters[0, 0]) {
     console.log("got b");
     document.getElementById("b");
@@ -77,7 +89,7 @@ function registerKey() {
     e.innerText = "e";
   }
   if (event.key != letters) {
-    console.log("bad guess");
+    ;
   } 
 }
 
