@@ -61,8 +61,6 @@ function gameStart() {
   let currentWordIndex = Math.floor(Math.random() * (words.length));
   currentWord = words[currentWordIndex];
 
-  console.log(currentWord) //TESTING ----------------------------------------
-
   for (let i = 0; i < words[currentWordIndex].length; i++) {
     currentWordArray.push("*")
   }
