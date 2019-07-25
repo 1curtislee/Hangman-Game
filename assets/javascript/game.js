@@ -1,98 +1,59 @@
+let words = [
+  "backscratcher",
+  "organize",
+  "caffeinated",
+  "amazing",
+  "jostle"
+];
+let wordArray = [];
+let remainingGuesses = 20;
+let lettersGuessed = [];
+let guessableLetters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+
 function gameStart() {
-  var guesses = document.getElementById("guessCount");
-  guesses.innerText = remainingGuesses;
+  lettersGuessed = [];
+  remainingGuesses = 20;
+  let currentWordIndex = Math.floor(Math.random() * (words.length));
+  for (var i = 0; i < words[currentWordIndex].length; i++) {
+    wordArray.push("*")
+  }
+
+  updateDisplay();
 }
 
-var remainingGuesses = 20;
-if (remainingGuesses == 0) {
+function updateDisplay() {
+  let wordText = "";
+  for (var i = 0; i < wordArray.length; i++) {
+    wordText += wordArray[i];
+  }
+
+  $("#remainingGuesses").text(remainingGuesses);
+  $("#lettersGuessed").text(lettersGuessed)
+  $("#currentWord").text(wordText);
+}
+
+if (remainingGuesses === 0) {
   alert("GAME OVER");
 }
 
 function decreaseGuesses() {
   remainingGuesses--;
-  var guesses = document.getElementById("guessCount");
-  guesses.innerText = remainingGuesses;
+  $('#remainingGuesses').text(remainingGuesses);
   if (remainingGuesses == 0) {
     alert("GAME OVER");
   }
 }
 
-var lettersGuessed = [];
-function trackLetters() {
-  var pressed = event.key;
-
-  console.log("letterTrack", pressed);
+$(document).keypress(function(event) {
   
-  lettersGuessed.push(pressed);
-  console.log(lettersGuessed);
-  
-  document.getElementById("lettersGuessedP");
-  lettersGuessedP.innerText = lettersGuessed;
-  
-}
-
-var letters = ["b", "a", "c", "k", "s", "c", "r", "a", "t", "c", "h", "e", "r"]
-
-function registerKey() {
-  console.log(event.key);
-  
-  if (event.key == letters[0, 0]) {
-    console.log("got b");
-    document.getElementById("b");
-    b.innerText = "b";
-  }
-  if (event.key == letters[0, 1]) {
-    console.log("got a");
-    document.getElementById("a1");
-    document.getElementById("a2");
-    a1.innerText = "a";
-    a2.innerText = "a";
-  }
-  if (event.key == letters[1, 2]) {
-    console.log("got c");
-    document.getElementById("c1");
-    document.getElementById("c2");
-    document.getElementById("c3");
-    c1.innerText = "c";
-    c2.innerText = "c";
-    c3.innerText = "c";
-  }
-  if (event.key == letters[2, 3]) {
-    console.log("got k");
-    document.getElementById("k");
-    k.innerText = "k";
-  }
-  if (event.key == letters[3, 4]) {
-    console.log("got s");
-    document.getElementById("s");
-    s.innerText = "s";
-  }
-  if (event.key == letters[5, 6]) {
-    console.log("got r");
-    document.getElementById("r1");
-    document.getElementById("r2");
-    r1.innerText = "r";
-    r2.innerText = "r";
-  }
-  if (event.key == letters[7, 8]) {
-    console.log("got t");
-    document.getElementById("t");
-    t.innerText = "t";
-  }
-  if (event.key == letters[9, 10]) {
-    console.log("got h");
-    document.getElementById("h");
-    h.innerText = "h";
-  }
-  if (event.key == letters[10, 11]) {
-    console.log("got e");
-    document.getElementById("e");
-    e.innerText = "e";
-  }
-  if (event.key != letters) {
-    ;
+  for (var i = 0; i < guessableLetters.length; i++) {
+    if ( event.key === guessableLetters[i]) {
+      lettersGuessed.push(event.key);
+      decreaseGuesses();
+    }
   } 
-}
+  $("#lettersGuessed").text(lettersGuessed)
+})
 
 
 
