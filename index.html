@@ -4,21 +4,30 @@
 
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
   </head>
-  <body onload="gameStart();">
+  <body onLoad="setup();" onKeyPress="keyPressHandler();">
     <h1>Hangman Game</h1>
-    <div class="gameTextBox">  
-      <div class="gameText">
-        press any key to start
-        <br>
-        wins: 
-        <br>
-        current word
-        <p id=currentWord></p>
-        remaining guesses
-        <p id="remainingGuesses"></p>
-        already guessed
-        <p id="lettersGuessed">
+    <div class="game">  
+      <p id="pressStart">press any key to start</p>
+
+      <div id="gameContainer">
+        <p id="instructions">use your keyboard to guess</p>
+        <h2><span id=currentWord></span></h2>
+        <div>remaining guesses: <span id="remainingGuesses"></span></div>
+        <div>already guessed: <span id="lettersGuessed"></span></div>
+        <br/>
+        
       </div>
+
+      <!-- win text -->
+      <div id="winner">
+        <p>YOU WON!</p>
+      </div>
+      <!-- loss text -->
+      <div id="loser">
+        <p>you lost<br/>bummer man</p>
+      </div>
+      <div>wins: <span id="wins"></span></div>
+      <div>losses: <span id="losses"></span></div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
