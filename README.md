@@ -1,4 +1,4 @@
-# Hangman-Game
+# Hangman 1999
 
 Classic Hangman game with an old school vibe <br/>
 Use your keybaord to guess letters <br/>
