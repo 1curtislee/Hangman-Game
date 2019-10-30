@@ -13,4 +13,4 @@ The page automatically keeps track of your wins and losses <br/>
 
 ### Author
 [Curtis Humphrey](https://1curtislee.github.io/portfolio/) <br/>
-freelance web developer, lover of problem solving
+Freelance web developer, lover of problem solving
