@@ -12,5 +12,5 @@ The page automatically keeps track of your wins and losses <br/>
 * Javascript
 
 ### Author
-[Curtis Humphrey](https://1curtislee.github.io/portfolio/)
+[Curtis Humphrey](https://1curtislee.github.io/portfolio/) <br/>
 freelance web developer, lover of problem solving
